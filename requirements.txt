@@ -1,0 +1,49 @@
+import glob
+import os
+import random
+import zipfile
+from IPython.display import clear_output
+from tqdm import tqdm
+
+import albumentations as A
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from albumentations.pytorch import ToTensorV2
+from PIL import Image
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import torchvision
+import torchvision.models as models
+import torchvision.transforms as transforms
+import torchvision.utils as vutils
+from torch.optim import Adam, AdamW
+from torch.optim.lr_scheduler import (CosineAnnealingLR, LinearLR,
+                                     ReduceLROnPlateau)
+from torch.utils.data import DataLoader, Dataset, random_split
+from torchvision.datasets import ImageFolder
+from torchvision.utils import save_image
+
+import timm
+from timm.data.mixup import Mixup
+from transformers import AutoModel
+import zipfile 
+import random 
+
+
+IPython	7.34.0
+tqdm	4.65.0
+albumentations	1.2.1
+cv2	4.7.0
+matplotlib	3.7.1
+numpy	1.22.4
+pandas	1.5.3
+PIL	9.4.0
+torch	2.0.1+cu118
+torchvision	0.15.2+cu118
+timm	1.0.15
+transformers	4.51.3
